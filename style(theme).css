@@ -1,0 +1,132 @@
+:root {
+    --cor-background1: #9c9c9c;
+    --cor-background2: #D3D3D3;
+    --cor-title: #4A4A4A; 
+    --cor-sheet: #E0E0E0; 
+    --cor-tabs: #A9A9A9; 
+    --cor-tabs_hover: #b7b7b7; 
+    --cor-fields: #b7b7b7;
+    --cor-fieldhighlight: #a2a2a2;
+    --cor-border: #4A4A4A; 
+    --cor-border_focus: #A9A9A9; 
+    --cor-title: #141414;
+    --cor-text: #2C2C2C;
+    --cor-input: #E0E0E0;
+}
+
+body { /* cor background e text*/
+    background: linear-gradient(to bottom,var(--cor-background1),var(--cor-background2));
+    color: var(--cor-text);
+    transition: 0.5s ease-in-out;
+}
+.title {
+    color: var(--cor-title);
+}
+.headerarea { /* cor title */
+    text-shadow: 
+    -1px -1px 0 var(--cor-sheet), /* Sombra superior esquerda */
+    1px -1px 0 var(--cor-sheet), /* Sombra superior direita */
+    -1px 1px 0 var(--cor-sheet), /* Sombra inferior esquerda */
+    1px 1px 0 var(--cor-sheet);   /* Sombra inferior direita */
+    color: var(--cor-title); /* Cor do texto */
+    background-image: var(--cor-background-image); /* Nova variável para a imagem de fundo */
+    margin: 10px
+}
+
+.labels, .labelmod {
+    color: var(--cor-text);
+}
+
+.tabs a { /* cor tabs  */
+    background-color: var(--cor-tabs);
+    color: var(--cor-text);
+}
+
+.tabs a:hover { /* cor tabs hover */
+    background-color: var(--cor-tabs_hover);
+
+}
+
+.tabs select { /* cor select */
+    background-color: var(--cor-tabs);
+    color: var(--cor-text);
+    border: solid 2px var(--cor-border);
+}
+
+.tabs select:hover { /* cor hover select */
+    background-color: var(--cor-tabs_hover);
+}
+
+.container { /* cor sheet */
+    background-color: var(--cor-sheet);
+
+}
+
+.traits1, .traits2, .traits3 { /* cor fields */
+    background-color: var(--cor-fields);
+
+}
+
+.input {
+    border: 2px solid var(--cor-border);
+    background-color: var(--cor-input);
+}
+
+.input:focus {
+    border-color: var(--cor-border_focus) 
+}
+
+.inputatributes {
+    border: 2px solid var(--cor-border);
+    background-color: var(--cor-input);
+}
+
+.inputatributes:focus {
+    border-color: var(--cor-border_focus) 
+}
+
+.inputmodifier {
+    border: 2px solid var(--cor-border);
+    background-color: var(--cor-input);
+}
+
+.maestry_dice {
+    border: 2px solid var(--cor-border);
+    background-color: var(--cor-input);
+}
+.input_ativos { /* quadradinho dos ativos */
+    border: 2px solid var(--cor-border);
+    background-color: var(--cor-input);
+}
+
+.input_ativos:focus { /* quadradinho dos ativos */
+    border-color: var(--cor-border_focus)
+}
+
+.inputpoints {
+    border: 2px solid var(--cor-border);
+    background-color: var(--cor-input);
+}
+
+.inputpoints:focus {
+    border-color: var(--cor-border_focus)
+}
+
+.traits2center { /* ativos e dado de maestria */
+    border-right: 2px solid var(--cor-border);
+    border-left: 2px solid var(--cor-border);
+}
+
+.pic {
+    border: 2px solid var(--cor-border);
+}
+
+#tip .tooltip {
+    background-color: var(--cor-fields);
+    color: var(--cor-text);
+    border: solid 1px var(--cor-border);
+}
+
+.centerareatop {
+    background-color: var(--cor-sheet);
+}

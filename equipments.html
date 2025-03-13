@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style(theme).css">
+</head>
+<body class="body">
+    <div class="sheet">
+        <div class="container">
+            <div class="headerarea"> <!-- Título principal-->
+                <h1> Contos de Myrathia </h1>
+            </div> <!-- fecha Título principal-->
+            <div class="tabs"> <!-- Links para as abas-->
+                <a class="tab1" href="actions.html" title="Ações" target="_self"> Ações </a>
+                <a class="tab2" href="index.html" title="Características" target="_self"> Características </a>
+                <a class="tab3" href="equipments.html" title="Equipamentos" target="_self"> Equipamentos </a>
+                <a class="tab4" href="personal.html" title="Traços Pessoais" target="_self"> Traços Pessoais </a>
+                <a class="tab5" href="spells.html" title="Feitiços" target="_self"> Feitiços </a>
+                <select id="themeSelector" title="themeSelector">
+                    <option value="" disabled selected>Temas</option>
+                    <option value="Biblioteca">Biblioteca Arruinada</option>
+                    <option value="root">Dia Monótono</option>                    
+                    <option value="Floresta_Úmida">Floresta Úmida</option>
+                    <option value="Noite">Noite de Lua Cheia</option>
+                    <option value="Sorvete_de_Morango">Sorvete de Morango</option>
+                    
+                </select>
+            </div>
+            <div class="title">
+                <h1> Equipamentos </h1>
+            </div>
+            <div class="equipment-area">                        
+                <div class="equipment-area1"> <!--Armas e Catalisadores--> 
+                    <label class="labels"> <h2> Armas e Catalisadores </h2>  </label>
+                    <div class="equipment-area1top"> <!--Mãos-->
+                        <div class="mainhand">
+                            <label class="labels"> Mão Principal </label>
+                                <input class="input" id="weapon">
+                        </div> <!--fecha Mãos-->
+                        <div class="offhand">
+                            <label class="labels"> Mão Secundária </label>
+                                <input class="input" id="weapon">
+                        </div>
+                    </div>
+                    <div class="equipment-area1bottom"> <!--Ataques-->
+                        <label class="labels"> Ataque 1 </label>
+                        <div class="attack1">                            
+                                <input class="input" id="imputattack" placeholder="Rol. de Ataque">
+                                <input class="input" id="imputattackdmg" placeholder="Rol. de Dano (tipo)">
+                                <input class="input" id="imputattack" placeholder="Alcance">
+                        </div>
+                        <label class="labels"> Ataque 2 </label>
+                        <div class="attack2">                            
+                            <input class="input" id="imputattack" placeholder="Rol. de Ataque">
+                            <input class="input" id="imputattackdmg" placeholder="Rol. de Dano (tipo)">
+                            <input class="input" id="imputattack" placeholder="Alcance">  
+                        </div>
+                    </div> <!--fecha Ataques-->
+
+                </div> <!--fecha Armas e Catalisadores-->
+                <div class="equipment-area2"> <!--Vestuário-->
+                    <label class="labels"> <h2> Armaduras e Escudos </h2>  </label> 
+                    <div class="equipment-area2mid">                                                                      
+                        <label class="labels"> Armadura </label>
+                        <div class="armor">                                
+                            <input class="input" id="inputarmorname">
+                            <input class="input" id="inputarmor" placeholder="CA bônus">
+                            <input class="input" id="inputarmor" placeholder="Tipo de Armadura">
+                        </div>
+                        <label class="labels"> Escudo </label>
+                        <div class="armor">                                
+                            <input class="input" id="inputarmorname">
+                            <input class="input" id="inputarmor" placeholder="CA bônus">
+                            <input class="input" id="inputarmor" placeholder="Tipo de">
+                        </div>                               
+                    </div>
+                </div> <!--fecha Vestuário-->
+            </div> <!-- Fecha equipment-area-->
+            <div class="title">
+                <h1> Inventário </h1>
+            </div>
+            <div class="inventory-area">                
+                <div class="inventory1">
+                    <label class="labels"> <h2> Mochila </h2>  </label>
+                    <textarea id="inventory">
+                                           
+                        
+                    </textarea>
+                </div>
+                <div class="inventory2">
+                    <label class="labels"> <h2> Algibeira </h2> </label>
+                    <div class="pouch">
+                        <div class="coins" id="twinkle">
+                            <label class="labels"> Cintilas c⦵</label>
+                            <input class="input_coins" type="number">
+                        </div>                        
+                        <div class="coins" id="gold">
+                            <label class="labels"> Douras d⦵</label>
+                            <input class="input_coins" type="number">
+                        </div>
+                        <div class="coins" id="silver">
+                            <label class="labels"> Prateadas p⦵</label>
+                            <input class="input_coins" type="number">
+                        </div>
+                    </div> 
+                </div>
+
+            </div>
+            <div class="title">
+                <h1> Itens Mágicos </h1>
+            </div>
+            <div class="items-area">
+                <div class="item">                    
+                    <div class="itemname">
+                        <label class="labels"> Nome do Item</label>
+                        <input class="input" id="itemname">
+                    </div>
+                    <div class="img">
+                        <label class="pic">
+                            <input type="file" accept="image/*" class="pic_input"/>
+                                <span class= "pic_img"></span>                   
+                        </label>                        
+                    </div>
+                    <div class="itemtype">
+                        <label class="labels"> Tipo de Item </label>
+                        <input class="input" id="itemtype">
+                    </div>
+                    <div class="itemdescription">
+                        <label class="labels"> Descrição do Item </label>
+                        <textarea id="itemdescription">
+
+                        </textarea>
+
+                    </div>
+                </div>
+                <div class="item">                    
+                    <div class="itemname">
+                        <label class="labels"> Nome do Item</label>
+                        <input class="input" id="itemname">
+                    </div>
+                    <div class="img">
+                        <label class="pic">
+                            <input type="file" accept="image/*" class="pic_input"/>
+                                <span class= "pic_img"></span>                   
+                        </label>                        
+                    </div>
+                    <div class="itemtype">
+                        <label class="labels"> Tipo de Item </label>
+                        <input class="input" id="itemtype">
+                    </div>
+                    <div class="itemdescription">
+                        <label class="labels"> Descrição do Item </label>
+                        <textarea id="itemdescription">
+
+                        </textarea>
+
+                    </div>
+                </div>
+                <div class="item">                    
+                    <div class="itemname">
+                        <label class="labels"> Nome do Item</label>
+                        <input class="input" id="itemname">
+                    </div>
+                    <div class="img">
+                        <label class="pic">
+                            <input type="file" accept="image/*" class="pic_input"/>
+                                <span class= "pic_img"></span>                   
+                        </label>                        
+                    </div>
+                    <div class="itemtype">
+                        <label class="labels"> Tipo de Item </label>
+                        <input class="input" id="itemtype">
+                    </div>
+                    <div class="itemdescription">
+                        <label class="labels"> Descrição do Item </label>
+                        <textarea id="itemdescription">
+
+                        </textarea>
+
+                    </div>
+                </div>
+                <div class="item">                    
+                    <div class="itemname">
+                        <label class="labels"> Nome do Item</label>
+                        <input class="input" id="itemname">
+                    </div>
+                    <div class="img">
+                        <label class="pic">
+                            <input type="file" accept="image/*" class="pic_input"/>
+                                <span class= "pic_img"></span>                   
+                        </label>                        
+                    </div>
+                    <div class="itemtype">
+                        <label class="labels"> Tipo de Item </label>
+                        <input class="input" id="itemtype">
+                    </div>
+                    <div class="itemdescription">
+                        <label class="labels"> Descrição do Item </label>
+                        <textarea id="itemdescription">
+
+                        </textarea>
+
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

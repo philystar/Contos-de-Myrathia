@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style(theme).css">
+</head>
+<body class="body">
+    <div class="sheet">
+        <div class="container">
+            <div class="headerarea"> <!-- Título principal-->
+                <h1> Contos de Myrathia </h1>
+            </div> <!-- fecha Título principal-->
+            <div class="tabs"> <!-- Links para as abas-->
+                <a class="tab1" href="actions.html" title="Ações" target="_self"> Ações </a>
+                <a class="tab2" href="index.html" title="Características" target="_self"> Características </a>
+                <a class="tab3" href="equipments.html" title="Equipamentos" target="_self"> Equipamentos </a>
+                <a class="tab4" href="personal.html" title="Traços Pessoais" target="_self"> Traços Pessoais </a>
+                <a class="tab5" href="spells.html" title="Feitiços" target="_self"> Feitiços </a>
+                <select id="themeSelector" title="themeSelector">
+                    <option value="" disabled selected>Temas</option>
+                    <option value="Biblioteca">Biblioteca Arruinada</option>
+                    <option value="root">Dia Monótono</option>                    
+                    <option value="Floresta_Úmida">Floresta Úmida</option>
+                    <option value="Noite">Noite de Lua Cheia</option>
+                    <option value="Sorvete_de_Morango">Sorvete de Morango</option>
+                    
+                </select>
+            </div> <!-- fecha Links para as abas-->
+            <form class="centerarea"> <!-- Parte principal da ficha-->
+                <div class="title"> 
+                    <h1> Características Pessoais </h1>
+                </div> 
+                <div class="traits1">  <!--Características Pessoais-->
+                    <div class="traits1column1">
+                        <label class="labels" for="name">Nome:</label>
+                            <input class="input" placeholder="Nome do Personagem"></input>
+                        <label class="labels" for="class">Raça:</label>
+                            <input class="input" placeholder="Raça do Personagem"></input>
+                    </div>
+                    <div class="traits1column2">
+                        <label class="labels" for="class">Classe:</label>
+                            <select class="input" id="class" name="class" placeholder="Classe de Personagem">
+                                    <option value="" disabled selected>Selecione uma classe</option>
+                                    <option value="Combatente">Combatente</option>
+                                    <option value="Conjurador">Conjurador</option>
+                                    <option value="Defensor">Defensor</option>
+                                    <option value="Suporte">Suporte</option>
+                                </select>
+                        <label class="labels" for="subclass">Arquétipo:</label>
+                            <input class="input" placeholder="Arquétipo de Personagem"></input>                                               
+                    </div>
+                    <div class="traits1column3">
+                        <label class="labels" for="background">Antecedente:</label>
+                            <input class="input" placeholder="Antecedente do Personagem"></input>
+                        <label class="labels" for="alignment">Tendência:</label>
+                            <input class="input" placeholder="Tendência do Personagem"></input>
+                    </div>
+                    <div class="traits1column4">
+                        <label class="pic">
+                            <input type="file" accept="image/*" class="pic_input"/>
+                                <span class= "pic_img"></span>
+                        </label>  
+                    </div>                                        
+                </div> 
+                <div class="title"> <!--Título Meio-->
+                <h1> Características Técnicas </h1>
+                </div>  
+                <div class="traits2"> <!--Características Ténicas-->
+                    <div class="traits2left"> <!--Pontos de Vida e Escudo-->
+                        <div class="health"> <!-- Vida -->
+                            <label class="labels" for="health"> Pontos de Vida </label>
+                            <div class="input-group1">
+                                <input class="inputpoints" type="number" maxlength="3" min="0" placeholder="Atual"></input>
+                                <input class="inputpoints" type="number" maxlength="3" min="0" placeholder="Máximo"></input>
+                            </div>
+                        </div>
+                        <div class="shield"> <!-- Escudo -->
+                            <label class="labels" for="health"> Pontos de Proteção </label>
+                            <div class="input-group1">
+                                <input class="inputpoints" type="number" maxlength="3" min="0" placeholder="Atual"></input>
+                                <input class="inputpoints" type="number" maxlength="3" min="0" placeholder="Máximo"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="traits2center"> <!--Ativos-->
+                        <div class="traits2top">
+                            <div class="input-group">
+                                <label class="labels" id="tip" for="armorclass">Classe de <br> Armadura
+                                    <span class="tooltip">10 + bônus de armadura ou <br> 10 + mod de DES (caso não usar armadura) </span>
+                                </label>
+                                    <input class="input_ativos"></input>
+                                <label class="labels" id="tip" for="initiative">Iniciativa
+                                    <span class="tooltip">modificador de AST + modificador de DES</span>
+                                </label>
+                                    <input class="input_ativos"></input>
+                            </div>
+                            <div class="input-group">
+                                <label class="labels" id="tip" for="passiveperceptive">Percepção <br> Passiva
+                                    <span class="tooltip">10 + modificador de CON</span>
+                                </label>
+                                    <input class="input_ativos"></input>
+                                <label class="labels" for="speed">Deslocamento</label>
+                                    <input class="input_ativos"></input>
+                            </div>
+                            <div class="input-group">
+                                <label class="labels" for="hitdie">Dado de <br> Vida</label>
+                                <input class="input_ativos"></input>
+                                <label class="labels" for="level">Nível</label>
+                                <input class="input_ativos"></input>
+                            </div>
+                        </div>
+                        <div class="traits2bottom">
+                            <div class="input-group">
+                                <label class="labels" for="maestry_dice">Dado de<br> Maestria</label>
+                                    <select class="maestry_dice" id="maestry_dice" name="maestrydice">
+                                        <option value="" disabled selected>DM</option>
+                                        <option value="Combatente">1d4</option>
+                                        <option value="Conjurador">1d6</option>
+                                        <option value="Defensor">1d8</option>
+                                    </select>                                
+                            </div>
+                            <div class="input-group">
+                                <label class="labels" for="inspiration">Inspiração <br> Heróica</label>
+                                    <input class="maestry_dice" type="number" min="0" max="1">
+                            </div>
+                            <div class="input-group">
+                                <label class="labels" for="inspiration_dice">Dados de <br> Inspiração</label>
+                                    <input class="maestry_dice" type="number" id="maestry_dice" name="inspirationdice" min="0" max="5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="traits2right"> <!--Pontos de Mana e Energia-->
+                        <div class="stamina"> <!-- Stamina -->
+                            <label class="labels" for="stamina"> Pontos de Energia </label>
+                            <div class="input-group1">
+                                <input class="inputpoints" type="number" maxlength="3" placeholder="Atual"></input>
+                                <input class="inputpoints" type="number" maxlength="3" placeholder="Máximo"></input>
+                            </div>
+                        </div>
+                        <div class="mana"> <!-- Mana -->
+                            <label class="labels" for="mana"> Pontos de Mana </label>
+                            <div class="input-group1">
+                                <input class="inputpoints" type="number" maxlength="3" placeholder="Atual"></input>
+                                <input class="inputpoints" type="number" maxlength="3" placeholder="Máximo"></input>
+                            </div>
+                        </div>
+
+                    </div>     
+                </div>
+                <div class="title"> <!--Título Fim-->
+                    <h1> Atributos </h1>
+                </div>
+                <div class="traits3"> <!--Atributos-->
+                    <div class="physical"> <!-- Atributos Físicos -->
+                        <div class=" strength">
+                            <label class="labels" id="tip" for="strength">Força
+                                <span class="tooltip"> Define o poder do corpo do personagem. <br>
+                                     Um personagem com força elevada é capaz <br>
+                                    de carregar muito peso e bater com mais força.
+                                </span>
+                            </label>
+                                <input class="inputatributes" id="strength" type="number" min="1" max="20" oninput="calculateModifier('strength')"></input>
+                            <label class="labelmod" for="strengthmodifier">Mod. FOR</label>
+                                <input class="inputmodifier" id="strengthmodifier" readonly></input>
+                        </div>
+                        <div class="dexterity">
+                            <label class="labels" id="tip" for="dexterity">Destreza
+                                <span class="tooltip"> Define o quão precisamente o personagem usa seu corpo. <br>
+                                     Um personagem com destreza elevada é capaz <br>
+                                     de realizar acrobacias e ser silencioso com facilidade.
+                                </span>
+                            </label>
+                                <input class="inputatributes" id="dexterity" type="number" min="1" max="20" oninput="calculateModifier('dexterity')"></input>
+                            <label class="labelmod" for="dexteritymodifier">Mod. DES</label>
+                                <input class="inputmodifier" id="dexteritymodifier" readonly></input>
+                        </div>
+                        <div class="vigor">
+                            <label class="labels" id="tip" for="vigor">Vigor
+                                <span class="tooltip"> Define a resistência do corpo do personagem. <br>
+                                     Um personagem com vigor elevado raramente <br>                                     
+                                     fica doente e aguenta mais dano.
+                                </span>
+                            </label>
+                                <input class="inputatributes" id="vigor" type="number" min="1" max="20" oninput="calculateModifier('vigor')"></input>
+                            <label class="labelmod" for="vigor">Mod. VIG</label>
+                                <input class="inputmodifier" id="vigormodifier" readonly></input>
+                        </div>
+                    </div>
+                    <div class="mental"> <!-- Atributos Mentais -->
+                        <div class=" intellect">
+                            <label class="labels" id="tip" for="intellect">Intelecto
+                                <span class="tooltip"> Define o quão inteligente um personagem é, <br>
+                                     a força de sua mente tem para reter informações e conhecimentos. <br>
+                                     Um personagem com intelecto elevado é capaz <br>
+                                    de se lembrar com precisão de informações adquiridas.
+                                </span>
+                            </label>
+                                <input class="inputatributes" id="intellect" type="number" min="1" max="20" oninput="calculateModifier('intellect')"></input>
+                            <label class="labelmod" for="intellectmodifier">Mod. INT
+                            </label>
+                                <input class="inputmodifier" id="intellectmodifier" readonly></input>
+                        </div>
+                        <div class="cunning">
+                            <label class="labels" id="tip" for="cunning">Astúcia
+                                <span class="tooltip">
+                                    Define o quão rápido e precisamente um personagem <br>
+                                    pensa. Um personagem com astúcia elevada <br>
+                                    consegue entender como algo funciona e é sempre o primeiro a agir.
+                               </span>
+                            </label>
+                                <input class="inputatributes" id="cunning" type="number" min="1" max="20" oninput="calculateModifier('cunning')"></input>
+                            <label class="labelmod" for="cunningmodifier">Mod. AST</label>
+                                <input class="inputmodifier" id="cunningmodifier" readonly></input>
+                        </div>
+                        <div class="resilience">
+                            <label class="labels" id="tip" for="resilience">Resiliência
+                                <span class="tooltip">
+                                    Define o quão bem um personagem consegue lidar <br>
+                                    com problemas mentais, como pressão ou estresse. <br>
+                                    Um personagem com resiliência elevada não se abala <br>
+                                    com cenários absurdos e funciona normalmente.
+                               </span>
+                            </label>
+                                <input class="inputatributes" id="resilience" type="number" min="1" max="20" oninput="calculateModifier('resilience')"></input>
+                            <label class="labelmod" for="resiliencemodifier">Mod. RES</label>
+                                <input class="inputmodifier" id="resiliencemodifier" readonly></input>
+                        </div>
+                    </div>
+                    <div class="social"> <!-- Atributos Sociais -->
+                        <div class="presence">
+                            <label class="labels" id="tip" for="presence">Presença
+                                <span class="tooltip">
+                                    Presença. Define o quão carismático é um personagem. <br>
+                                    Um personagem com presença elevado faz amigos com <br>
+                                    muita facilidade e é inesquecível.
+                               </span>
+                            </label>
+                                <input class="inputatributes" id="presence" type="number" min="1" max="20" oninput="calculateModifier('presence')"></input>
+                            <label class="labelmod" for="presencemodifier">Mod. PRE</label>
+                                <input class="inputmodifier" id="presencemodifier" readonly></input>
+                        </div>
+                        <div class="manipulation">
+                            <label class="labels" id="tip" for="manipulation">Manipulação
+                                <span class="tooltip">
+                                    Define o quão bem um personagem consegue <br>
+                                    utilizar sua presença para moldar cenários sociais. <br>
+                                    Um personagem com manipulação elevada consegue mentir <br>
+                                    e fazer com que os outros ajam de acordo com o que ele deseja.
+                               </span>
+                            </label>
+                                <input class="inputatributes" id="manipulation" type="number" min="1" max="20" oninput="calculateModifier('manipulation')"></input>
+                            <label class="labelmod" for="manipulationmodifier">Mod. MAN</label>
+                                <input class="inputmodifier" id="manipulationmodifier" readonly></input>
+                        </div>
+                        <div class="composure">
+                            <label class="labels" id="tip" for="composure">Compostura
+                                <span class="tooltip">
+                                    Define o quão resistente é a imagem de um personagem. <br>
+                                    Um personagem com compostura elevada se porta sempre <br>
+                                    com sua melhor imagem, não cede à provocações e projeta <br>
+                                    uma imagem de estabilidade.
+                               </span>
+                            </label>
+                                <input class="inputatributes" id="composure" type="number" min="1" max="20" oninput="calculateModifier('composure')"></input>
+                            <label class="labelmod" for="composuremodifier">Mod. COM</label>
+                                <input class="inputmodifier" id="composuremodifier" readonly></input>
+                        </div>
+                    </div>
+                    <div class="essential"> <!-- Atributos Essenciais -->
+                        <div class="willpower">
+                            <label class="labels" id="tip" for="willpower">Vontade
+                                <span class="tooltip">
+                                    Define a força de vontade e determinação de um personagem. <br>
+                                    Um personagem com vontade elevada é determinado e jamais  <br>
+                                     desiste dos seus desejos.
+                               </span>
+                            </label>
+                                <input class="inputatributes" id="willpower" type="number" min="1" max="20" oninput="calculateModifier('willpower')"></input>
+                            <label class="labelmod" for="willpowermodifier">Mod. VON</label>
+                                <input class="inputmodifier" id="willpowermodifier" readonly></input>
+                        </div>
+                        <div class="conscience">
+                            <label class="labels" id="tip" for="conscience">Consciência
+                                <span class="tooltip">
+                                    Define a forma que um personagem enxerga a sí e tudo ao seu redor. <br>
+                                    Um personagem com consicência elevada tem um vasto autoconhecimento, <br>
+                                    é sábio e consegue notar detalhes com mais facilidade.
+                               </span>
+                            </label>
+                                <input class="inputatributes" id="conscience" type="number" min="1" max="20" oninput="calculateModifier('conscience')"></input>
+                            <label class="labelmod" for="consciencemodifier">Mod. CON</label>
+                                <input class="inputmodifier" id="consciencemodifier" readonly></input>
+                        </div>
+                        <div class="sanity">
+                            <label class="labels" id="tip" for="sanity">Sanidade
+                                <span class="tooltip">
+                                    Define o quão inquebrável é o espírito de um personagem. <br>
+                                    Um personagem com sanidade elevada consegue resistir <br>
+                                    aos terrores que enfrenta e consegue lidar com os <br>
+                                    problemas, sem desistir ou ceder à fraqueza.
+                                </span>
+                            </label>
+                                <input class="inputatributes" id="sanity" type="number" min="1" max="20" oninput="calculateModifier('sanity')"></input>
+                            <label class="labelmod" for="sanitymodifier">Mod. SAN</label>
+                                <input class="inputmodifier" id="sanitymodifier" readonly></input>
+                        </div>
+                    </div>                                 
+                </div>                     
+             </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
