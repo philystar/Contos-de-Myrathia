@@ -318,8 +318,7 @@
     border-radius: 5px;
     font-family: "IM Fell English", serif;
     font-size: 16px;
-    color: #333;
-    background-color: #f4f3e7;
+    background-color: var(--cor-input);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -335,3 +334,37 @@
     font-style: italic;
 }
 
+.inputmaestry {
+    width: 35px; /* Largura fixa para os inputs */
+    height: 35px; /* Altura fixa para os inputs */
+    padding: 10px;
+    border: 2px solid var(--cor-border);
+    border-radius: 8px; /* Bordas arredondadas */
+    font-family: "IM Fell English", serif;
+    font-size: 20px;
+    color: #333;
+    background-color: var(--cor-input);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none; 
+    cursor: pointer;
+}
+
+.inputmaestry:checked {
+    background-color: var(--cor-sheet); /* Muda a cor de fundo quando o checkbox está marcado */
+    padding: 10px;
+}
+
+.atribute {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.atribute_modandmaestry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
