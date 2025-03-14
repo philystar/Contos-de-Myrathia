@@ -44,7 +44,6 @@ body { /* cor background e text*/
 
 .tabs a:hover { /* cor tabs hover */
     background-color: var(--cor-tabs_hover);
-
 }
 
 .tabs select { /* cor select */
@@ -129,4 +128,75 @@ body { /* cor background e text*/
 
 .centerareatop {
     background-color: var(--cor-sheet);
+}
+
+#itemdescription {
+    background-color: var(--cor-input);
+    border: solid 2px var(--cor-border);
+    scrollbar-color: var(--cor-border) var(--cor-input);
+}
+
+#itemdescription:focus {
+    background-color: var(--cor-input);
+}
+
+#itemname, #itemtype {
+    background-color: var(--cor-input);
+}
+
+.item {
+    background-color: var(--cor-fieldhighlight);
+    border-color: var(--cor-border);
+}
+
+.input_coins {
+    background-color: var(--cor-input);
+}
+
+.input_coins:focus {
+    border-color: var(--cor-border_focus);
+
+}
+
+#inventory {
+    background-color: var(--cor-input);
+    border: solid 2px var(--cor-border);
+    scrollbar-color: var(--cor-border) var(--cor-input);
+}
+   
+#inventory:focus {
+    border-color: var(--cor-border_focus);
+}
+
+.inventory1 {
+    border: solid 2px var(--cor-border);
+
+}
+
+.inventory2 {
+    background-color: var(--cor-fieldhighlight);
+    border: solid 2px var(--cor-border);
+}
+
+.inventory-area {
+    background-color: var(--cor-fields);
+}
+
+.equipment-area2 {
+    background-color: var(--cor-fieldhighlight);
+    border: solid 2px var(--cor-border);
+
+}
+
+.equipment-area1bottom {
+    border-top: solid 2px var(--cor-border);
+
+}
+
+.equipment-area {
+    background-color: var(--cor-fields);
+ 
+}
+.equipment-area1 {
+    border: solid 2px var(--cor-border);
 }

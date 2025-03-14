@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="style1.css">
-        <link rel="stylesheet" href="style(theme).css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style(theme).css">
+</head>
+<body class="body">
+    <div class="sheet">
+        <div class="container">
+            <div class="headerarea"> <!-- Título principal-->
+                <h1> Contos de Myrathia </h1>
+            </div> <!-- fecha Título principal-->
+            <div class="tabs"> <!-- Links para as abas-->
+                <a class="tab1" href="actions.html" title="Ações" target="_self"> Ações </a>
+                <a class="tab2" href="index.html" title="Características" target="_self"> Características </a>
+                <a class="tab3" href="equipments.html" title="Equipamentos" target="_self"> Equipamentos </a>
+                <a class="tab4" href="personal.html" title="Traços Pessoais" target="_self"> Traços Pessoais </a>
+                <a class="tab5" href="spells.html" title="Feitiços" target="_self"> Feitiços </a>
+                <select class="themeSelector" title="themeSelector">
+                    <option value="" disabled selected>Temas</option>
+                    <option value="Biblioteca">Biblioteca Arruinada</option>
+                    <option value="root">Dia Monótono</option>                    
+                    <option value="Floresta_Úmida">Floresta Úmida</option>
+                    <option value="Noite">Noite de Lua Cheia</option>
+                    <option value="Sorvete_de_Morango">Sorvete de Morango</option>
+                </select>
+            </div> <!-- fecha Links para as abas-->
+            <div class=title>
+                <h1> Aparência </h1>
+            </div>
+            <div class="appearance">
+                <div class="traits1">  <!--Características Pessoais-->
+                    <div class="traits1column1">
+                        <label class="labels" for="name">Idade:</label>
+                            <input class="input" placeholder="Idade do personagem"></input>
+                        <label class="labels" for="name">Altura:</label>
+                            <input class="input" placeholder="Altura do personagem"></input>
+                    </div>
+                    <div class="traits1column2">
+                        <label class="labels" for="class">Peso:</label>
+                            <input class="input" placeholder="Peso do personagem"></input>
+                        <label class="labels" for="name">Pele:</label>
+                            <input class="input" placeholder="Cor da pele do personagem"></input>                                                            
+                    </div>
+                    <div class="traits1column3">
+                        <label class="labels" for="background">Olhos:</label>
+                            <input class="input" placeholder="Cor dos olhos do personagem"></input>
+                        <label class="labels" for="class">Cabelo:</label>
+                            <input class="input" placeholder="Cor do cabelo do personagem"></input> 
+                    </div>
+                    <div class="traits1column4">
+                        <label class="pic">
+                            <input type="file" accept="image/*" class="pic_input"/>
+                                <span class= "pic_img"></span>
+                        </label>  
+                    </div>                                        
+                </div> 
+
+            </div>
+            <
+    <script src="script.js"></script>
+</body>
 </html>

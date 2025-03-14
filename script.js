@@ -32,6 +32,7 @@ function calculateModifier(attribute) {
     // Atualiza o campo do modificador
     document.getElementById(`${attribute}modifier`).value = modifier;
 }
+
 const inputFile = document.querySelector(".pic_input");
 const pictureImage = document.querySelector(".pic_img");
 const pictureImageTxt = "Escolha uma foto"
@@ -53,34 +54,8 @@ inputFile.addEventListener("change", function (e) {
     } else (pictureImage.innerHTML = pictureImageTxt)
 })
 
-document.querySelectorAll(".pic_input").forEach(inputFile => {
-    const pictureImage = inputFile.closest(".img").querySelector(".pic_img"); 
-    const pictureImageTxt = "Escolha uma foto";
-    pictureImage.innerHTML = pictureImageTxt;
-
-    inputFile.addEventListener("change", function (e) {
-        const file = e.target.files[0];
-
-        if (file) {
-            const reader = new FileReader();
-            reader.addEventListener("load", function (e) {
-                const img = document.createElement("img");
-                img.src = e.target.result;
-                img.classList.add("pic_img");
-
-                pictureImage.innerHTML = ""; // Limpa o texto "Escolha uma foto"
-                pictureImage.appendChild(img);
-            });
-
-            reader.readAsDataURL(file);
-        } else {
-            pictureImage.innerHTML = pictureImageTxt;
-        }
-    });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
-    const themeSelector = document.getElementById("themeSelector")
+    const themeSelector = document.querySelector(".themeSelector")
     const root = document.documentElement
     themeSelector.addEventListener("change", function () {
         const theme = this.value
@@ -100,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 root.style.setProperty("--cor-text","#2C2C2C")
                 root.style.setProperty("--cor-input","#E0E0E0")
                 root.style.setProperty("--cor-background-image", "url()")
-            break
+                break
             case "Sorvete_de_Morango":
                 root.style.setProperty("--cor-background1","#B6465F")
                 root.style.setProperty("--cor-background2","#EBD4CB")
@@ -115,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 root.style.setProperty("--cor-text","#2C0703")
                 root.style.setProperty("--cor-input","#E0E0E0")
                 root.style.setProperty("--cor-background-image", "url(imagens/petals.png)")
-            break
+                break
             case "Floresta_Úmida":
                 root.style.setProperty("--cor-background1","#6a8f5f")
                 root.style.setProperty("--cor-background2","#0e3e30")
@@ -130,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 root.style.setProperty("--cor-text","#2D2620")
                 root.style.setProperty("--cor-input","#c3c3ae")
                 root.style.setProperty("--cor-background-image", "url(imagens/leaves.png)")
-            break
+                break
             case "Noite":
                 root.style.setProperty("--cor-background1","#000000")
                 root.style.setProperty("--cor-background2","#100d36")
@@ -145,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 root.style.setProperty("--cor-text","#0c0625")
                 root.style.setProperty("--cor-input","#d6d4e6")
                 root.style.setProperty("--cor-background-image", "url(imagens/stars.png)")
-            break
+                break
             case "Biblioteca":
                 root.style.setProperty("--cor-background1","#3d3934")
                 root.style.setProperty("--cor-background2","#3d3934")
@@ -153,17 +128,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 root.style.setProperty("--cor-tabs","#d4ae9b")
                 root.style.setProperty("--cor-tabs_hover","#e6d3b7")
                 root.style.setProperty("--cor-fields","#d4ae9b")
+                root.style.setProperty("--cor-fieldhighlight", "#bb9482")
                 root.style.setProperty("--cor-border","#3d3934")
-                root.style.setProperty("--cor-border_focus","#")
+                root.style.setProperty("--cor-border_focus","#bb9482")
                 root.style.setProperty("--cor-title","#1c1a17")
                 root.style.setProperty("--cor-text","#3d3934")
                 root.style.setProperty("--cor-input","#e6d3b7")
                 root.style.setProperty("--cor-background-image", "url(imagens/books.png)")
-                root.style.setProperty("--cor-fieldhighlight", "#bb9482")
-            break
-                    
+                break        
         }
     })
 })
-
-
