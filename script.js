@@ -147,6 +147,24 @@ document.addEventListener("DOMContentLoaded", function () {
           "url(imagens/books.png)"
         );
         break;
+      case "Fogo":
+        root.style.setProperty("--cor-background1", "#62211F");
+        root.style.setProperty("--cor-background2", "#cc6346");
+        root.style.setProperty("--cor-sheet", "#2a1e1e");
+        root.style.setProperty("--cor-tabs", "#cc6346");
+        root.style.setProperty("--cor-tabs_hover", "#cc9946");
+        root.style.setProperty("--cor-fields", "#cc6346");
+        root.style.setProperty("--cor-fieldhighlight", "#b64d30");
+        root.style.setProperty("--cor-border", "#62211F");
+        root.style.setProperty("--cor-border_focus", "#cc9946");
+        root.style.setProperty("--cor-title", "#d1290f");
+        root.style.setProperty("--cor-text", "#62211F");
+        root.style.setProperty("--cor-input", "#ffa58d");
+        root.style.setProperty(
+          "--cor-background-image",
+          "url(imagens/fire.png)"
+        );
+        break;
     }
   }
 
@@ -164,4 +182,4 @@ document.addEventListener("DOMContentLoaded", function () {
     applyTheme(selectedTheme); // Aplica o novo tema
   });
 });
-//HENRIQUE ESTEVE AQUI
+//HENRIQUE ESTEVE AQUI some daqui henrique
