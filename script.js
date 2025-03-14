@@ -164,3 +164,4 @@ document.addEventListener("DOMContentLoaded", function () {
     applyTheme(selectedTheme); // Aplica o novo tema
   });
 });
+//HENRIQUE ESTEVE AQUI
