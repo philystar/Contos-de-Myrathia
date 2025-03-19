@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="style(theme).css">
 </head>
 <body class="body">
@@ -29,46 +30,75 @@
                     
                 </select>
             </div> <!-- fecha Links para as abas-->
+            <div class="title">
+                <h1>
+                    Informações de Conjurador
+                </h1>
+            </div>
             <div class="section1">
-                <div class="section1column1">
-                    <label class="label"> Atributo de Conjuração</label>
-                    <select class="input" name="class" placeholder="Atributo de Conjuração">
-                        <option value="" disabled selected>Selecione um atributo</option>
-                        <option value="atributespell">FOR</option>
-                        <option value="atributespell">VIG</option>
-                        <option value="atributespell">DES</option>
-                        <option value="atributespell">INT</option>
-                        <option value="atributespell">AST</option>
-                        <option value="atributespell">RES</option>
-                        <option value="atributespell">PRE</option>
-                        <option value="atributespell">MAN</option>
-                        <option value="atributespell">COM</option>
-                        <option value="atributespell">DET</option>
-                        <option value="atributespell">CON</option>
-                        <option value="atributespell">SAN</option>
-                    </select> 
+                <div class="section1column1" id="spellcolumn">
+                    <label class="labels"> Atributo de Conjuração</label>
+                    <input class="input" id="spellcasterinfo1" name="class">
                 </div>
-                <div class="section1column2">
-                    <label class="label"> Modificador de Conjuração </label>
-                    <input class="input" type="number">
+                <div class="section1column2" id="spellcolumn">
+                    <label class="labels" id="tip"> Modificador de Conjuração 
+                        <span class="tooltip"> Modificador do atributo de conjuração </span>
+                    </label>
+                    <input class="input" id="spellcasterinfo">
                 </div>
-                <div class="section1column3">
-                    <label class="label"> Classe de Dificuldade </label>
-                    <input class="input" type="number" placeholder="10 + mod. de conjuração">
+                <div class="section1column3" id="spellcolumn">
+                    <label class="labels" id="tip"> Classe de Dificuldade
+                        <span class="tooltip"> 10 + Modificador de Conjuração </span>
+                    </label>
+                    <input class="input" id="spellcasterinfo">
                 </div>                           
             </div>
-            <div class="spells">
-                <div class="spells1">
-                    <div class="cantrips">
-                        <textarea>
-                            aaaaaaaaa
-                        </textarea>
+            <div class="title">
+                <h1>
+                    Feitiços
+                </h1>
+            </div>
+            <div class="section2">
+                <div class="section2column1">
+                    <div class="section2block1" id="cantrips">
+                        <div class="spell">
+                            <div class="spelltop">
+                                <div class="spellname">
+                                    <input class="input" id="spellname">
+                                </div>
+                                <div class="spellcircle">
+                                    <input class="input" id="spellcircle">
+                                </div>                                
+                            </div>
+                            <div class="spellmiddle">
+                                <div class="spellinfo_name">
+                                    <label class="labels"> Tempo de Conjuração </label>                                
+                                        <input class="input" id="spellaction" placeholder="Tempo de Conjuração">
+                                    <label class="labels"> Alcance do Feitiço </label>
+                                        <input class="input" id="spelltype" placeholder="Alcance do Feitiço">
+                                </div>
+                                <div class="spellcomponents_duration">
+                                    <label class="labels"> Componentes do Feitiço </label>
+                                        <input class="input" id="spellcomponents" placeholder="Componentes do Feitiço">                            
+                                    <label class="labels"> Duração do Feitiço </label>
+                                        <input class="input" id="spellduration" placeholder="Duração do Feitiço">
+                                </div>                                
+                            </div>
+                            <div class="spellbottom">                                
+                                <div class="spelldescription">
+                                    <label class="labels"> Descrição do Feitiço </label>
+                                    <textarea id="spelldescription">
+            
+                                    </textarea>
+            
+                                </div>
+                            </div>                 
+                        </div>
                     </div>
-                    <div class=""
                 </div>
-                <div class="spells2">
+                <div class="section2column2">
                 </div>
-                <div class="spells3">
+                <div class="section2column3">
                 </div>
             </div>
         </div>
