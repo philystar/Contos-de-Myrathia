@@ -274,17 +274,67 @@
 }
 
 .spell {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    padding: 20px;
+    background-color: var(--cor-fieldhighlight);
     border: 2px solid var(--cor-border);
     border-radius: 10px;
-    background-color: var(--cor-fieldhighlight);
+    display: flex;
+    flex-direction: column;
+    gap: 1px;   
+    width: 400px;
 }
+.spelltop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .spellmiddle {
     display: flex;
     flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.spellmiddle1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spellmiddle2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spellbottom {
+    padding: 10px;
+}
+
+#spellname {
+    font-family: "MedievalSharp";
+    font-size: 30px;
+    text-align: center;
+    box-shadow: var(--cor-fieldhighlight);
+    margin-bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#spelltype {
+    font-family: "MedievalSharp";
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
 }
 
 #spelldescription {
@@ -292,8 +342,6 @@
     vertical-align: top;
     padding: 5px; 
     resize: none;
-    min-width: 440px;
-    min-height: 220px;
     border-radius: 10px;
     font-family: "IM Fell English";
     font-size: 15px;
@@ -301,11 +349,12 @@
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     overflow-y: auto;
     scrollbar-width: thin;
-    justify-content: center;
     background-color: var(--cor-input);
-
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
 }
 
-#spellaction, #spelltype, #spellduration, #spellcomponents {
+#spellaction, #spellrange, #spellduration, #spellcomponents {
     margin-top: 2px;
 }
