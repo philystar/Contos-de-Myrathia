@@ -61,7 +61,7 @@ body { /* cor background e text*/
 
 }
 
-.traits1, .traits2, .traits3 { /* cor fields */
+.section1, .section2, .section3 { /* cor fields */
     background-color: var(--cor-fields);
 
 }
@@ -111,7 +111,7 @@ body { /* cor background e text*/
     border-color: var(--cor-border_focus)
 }
 
-.traits2center { /* ativos e dado de maestria */
+.section2center { /* ativos e dado de maestria */
     border-right: 2px solid var(--cor-border);
     border-left: 2px solid var(--cor-border);
 }
