@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
         root.style.setProperty("--cor-tabs", "#cc6346");
         root.style.setProperty("--cor-tabs_hover", "#cc9946");
         root.style.setProperty("--cor-fields", "#cc6346");
-        root.style.setProperty("--cor-fieldhighlight", "#b64d30");
+        root.style.setProperty("--cor-fieldhighlight", "#c15537");
         root.style.setProperty("--cor-border", "#62211F");
         root.style.setProperty("--cor-border_focus", "#cc9946");
         root.style.setProperty("--cor-title", "#d1290f");
@@ -179,4 +179,79 @@ const closeButton = document.getElementById('closeButton');
 closeButton.addEventListener('click', () => {
     spellDetails.style.display = 'none';
     toggleSpell.checked = false; // Desmarca o checkbox
+});
+
+// para adicionar feitiços
+
+// Função para adicionar um novo feitiço
+function addSpell(container) {
+  // Cria um ID único para o feitiço
+  const spellId = `spell-${Date.now()}`;
+
+  // Cria a estrutura do feitiço
+  const spellHTML = `
+      <div class="spellContainer">
+          <input class="input" placeholder="Nome do Feitiço">
+          <label for="${spellId}" class="toggleButton">
+              <input type="checkbox" id="${spellId}" class="toggleSpell">
+          </label>
+          <div id="spellDetails-${spellId}" class="spell" style="display: none;">
+              <div class="spelltop">
+                  <button class="input closeButton">Fechar</button>
+                  <input class="input" id="spellname" placeholder="Nome do Feitiço">
+                  <input class="input" id="spelltype" placeholder="Tipo do Feitiço">
+              </div>
+              <div class="spellmiddle">
+                  <div class="spellmiddle1">
+                      <label class="labels"> Tempo de Conjuração </label>
+                      <input class="input" id="spellaction" placeholder="Tempo de Conjuração">
+                      <label class="labels"> Alcance do Feitiço </label>
+                      <input class="input" id="spellrange" placeholder="Alcance do Feitiço">
+                  </div>
+                  <div class="spellmiddle2">
+                      <label class="labels"> Componentes do Feitiço </label>
+                      <input class="input" id="spellcomponents" placeholder="Componentes do Feitiço">
+                      <label class="labels"> Duração do Feitiço </label>
+                      <input class="input" id="spellduration" placeholder="Duração do Feitiço">
+                  </div>
+              </div>
+              <div class="spellbottom">
+                  <div class="spelldescription">
+                      <label class="labels"> Descrição do Feitiço </label>
+                      <textarea id="spelldescription"></textarea>
+                  </div>
+              </div>
+          </div>
+      </div>
+  `;
+
+  // Adiciona o feitiço ao container
+  container.insertAdjacentHTML('beforeend', spellHTML);
+
+  // Adiciona o evento de toggle ao checkbox
+  const toggleSpell = document.getElementById(spellId);
+  const spellDetails = document.getElementById(`spellDetails-${spellId}`);
+
+  toggleSpell.addEventListener('change', () => {
+      if (toggleSpell.checked) {
+          spellDetails.style.display = 'block';
+      } else {
+          spellDetails.style.display = 'none';
+      }
+  });
+
+  // Adiciona o evento de fechar ao botão "Fechar"
+  const closeButton = spellDetails.querySelector('.closeButton');
+  closeButton.addEventListener('click', () => {
+      spellDetails.style.display = 'none';
+      toggleSpell.checked = false;
+  });
+}
+
+// Adiciona o evento de clique aos botões "Adicionar Feitiço"
+document.querySelectorAll('.addSpellButton').forEach(button => {
+  button.addEventListener('click', () => {
+      const spellgroup = button.nextElementSibling; // Encontra o container .spellgroup
+      addSpell(spellgroup); // Adiciona um novo feitiço
+  });
 });

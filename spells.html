@@ -23,7 +23,8 @@
                 <select class="themeSelector" title="themeSelector">
                     <option value="" disabled selected>Temas</option>
                     <option value="Biblioteca">Biblioteca Arruinada</option>
-                    <option value="root">Dia Monótono</option>                    
+                    <option value="root">Dia Monótono</option>
+                    <option value="Fogo">Elemental de Fogo</option>                       
                     <option value="Floresta_Úmida">Floresta Úmida</option>
                     <option value="Noite">Noite de Lua Cheia</option>
                     <option value="Sorvete_de_Morango">Sorvete de Morango</option>
@@ -60,48 +61,79 @@
             </div>
             <div class="section2">
                 <div class="section2column1">
-                    <div class="section2block">
-                        <input class="input" placeholder="Nome do Feitiço">
+                    <label class="labels"> Truques </label>
+                    <div class="section2block" id="circle0">                        
+                        <button class="addSpellButton">+</button>
+                        <div class="spellgroup">
+                            <input class="input" placeholder="Nome do Feitiço">
                         <label for="toggleSpell" class="toggleButton">
                             <input type="checkbox" id="toggleSpell">
                         </label>
-                    </div>
-                    
-                    <!-- Janela flutuante com os detalhes do feitiço -->
-                    <div id="spellDetails" class="spell">
-                        <button id="closeButton" style="float: right;">X</button>                        
-                        <div class="spelltop">                               
-                            <input class="input" id="spellname" placeholder="Nome do Feitiço">
-                            <input class="input" id="spelltype" placeholder="Tipo do Feitiço">
-                        </div>
-                        <div class="spellmiddle">
-                            <div class="spellmiddle1">
-                                <label class="labels"> Tempo de Conjuração </label>                                
-                                <input class="input" id="spellaction" placeholder="Tempo de Conjuração">
-                                <label class="labels"> Alcance do Feitiço </label>
-                                <input class="input" id="spellrange" placeholder="Alcance do Feitiço">
-                            </div>
-                            <div class="spellmiddle2">
-                                <label class="labels"> Componentes do Feitiço </label>
-                                <input class="input" id="spellcomponents" placeholder="Componentes do Feitiço">                            
-                                <label class="labels"> Duração do Feitiço </label>
-                                <input class="input" id="spellduration" placeholder="Duração do Feitiço">
-                            </div>                                
-                        </div>
-                        <div class="spellbottom">                                
-                            <div class="spelldescription">
-                                <label class="labels"> Descrição do Feitiço </label>
-                                <textarea id="spelldescription"></textarea>
-                            </div>
-                        </div>                        
+                    </div>  <!-- Container para os feitiços -->
                     </div>
                 </div>
                 <div class="section2column2">
+                    <label class="labels"> 1° Círculo </label>
+                    <div class="section2block" id="circle1">
+                        <button class="addSpellButton">+</button>
+                        <div class="spellgroup"></div>
+                    </div>
+                    <label class="labels"> 2° Círculo </label>
+                    <div class="section2block" id="circle2">
+                        <button class="addSpellButton">+</button>
+                        <div class="spellgroup"></div>
+                    </div>
+                    <label class="labels"> 3° Círculo </label>
+                    <div class="section2block" id="circle3">
+                        <button class="addSpellButton">+</button>
+                        <div class="spellgroup"></div>
+                    </div>
                 </div>
-                <div class="section2column3">
-                    
+                <div class="section2column3">                    
+                    <label class="labels"> 4° Círculo </label>
+                    <div class="section2block" id="circle4">
+                        <button class="addSpellButton">+</button>
+                        <div class="spellgroup"></div>
+                    </div>
+                    <label class="labels"> 5° Círculo </label>
+                    <div class="section2block" id="circle5">
+                        <button class="addSpellButton">+</button>
+                        <div class="spellgroup"></div>
+                    </div>
+                    <label class="labels"> 6° Círculo </label>
+                    <div class="section2block" id="circle6">
+                        <button class="addSpellButton">+</button>
+                        <div class="spellgroup"></div>
+                    </div>
                 </div>
-            </div>    
+            </div> 
+            <div id="spellDetails" class="spell" style="display: none;"> <!-- Abre janela de feitiço -->                     
+                <div class="spelltop">
+                    <button class="input" id="closeButton" style="float: center;">Fechar</button>                                  
+                        <input class="input" id="spellname" placeholder="Nome do Feitiço">
+                    <input class="input" id="spelltype" placeholder="Tipo do Feitiço">
+                </div>
+                <div class="spellmiddle">
+                    <div class="spellmiddle1">
+                        <label class="labels"> Tempo de Conjuração </label>                                
+                        <input class="input" id="spellaction" placeholder="Tempo de Conjuração">
+                        <label class="labels"> Alcance do Feitiço </label>
+                        <input class="input" id="spellrange" placeholder="Alcance do Feitiço">
+                    </div>
+                    <div class="spellmiddle2">
+                        <label class="labels"> Componentes do Feitiço </label>
+                        <input class="input" id="spellcomponents" placeholder="Componentes do Feitiço">                            
+                        <label class="labels"> Duração do Feitiço </label>
+                        <input class="input" id="spellduration" placeholder="Duração do Feitiço">
+                    </div>                                
+                </div>
+                <div class="spellbottom">                                
+                    <div class="spelldescription">
+                        <label class="labels"> Descrição do Feitiço </label>
+                        <textarea id="spelldescription"></textarea>
+                    </div>
+                </div>
+            </div> <!-- Fecha janela de feitiço -->
         </div>
     </div>
     <script src="script.js"></script>
