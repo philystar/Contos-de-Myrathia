@@ -61,15 +61,15 @@
             </div>
             <div class="section2">
                 <div class="section2column1">
-                    <label class="labels"> Truques </label>
-                    <div class="section2block" id="circle0">                        
-                        <button class="addSpellButton">+</button>
+                    <label class="labels"> Truques </label>                    
+                    <div class="section2block" id="circle0">
+                        <button class="addSpellButton">+</button>                     
                         <div class="spellgroup">
-                            <input class="input" placeholder="Nome do Feitiço">
-                        <label for="toggleSpell" class="toggleButton">
-                            <input type="checkbox" id="toggleSpell">
-                        </label>
-                    </div>  <!-- Container para os feitiços -->
+                            <input class="input" placeholder="Nome do Feitiço"></input>
+                                <label for="toggleSpell" class="toggleButton">
+                                    <input class="toggleSpell" type="checkbox" id="toggleSpell">
+                                </label>
+                        </div>
                     </div>
                 </div>
                 <div class="section2column2">
@@ -108,9 +108,13 @@
                 </div>
             </div> 
             <div id="spellDetails" class="spell" style="display: none;"> <!-- Abre janela de feitiço -->                     
-                <div class="spelltop">
+                <div class="spellButtons">
                     <button class="input" id="closeButton" style="float: center;">Fechar</button>                                  
-                        <input class="input" id="spellname" placeholder="Nome do Feitiço">
+                    <button class="deleteSpellButton">Apagar</button> <!-- Botão de apagar -->
+                        <div id="spellDetails-${spellId}" class="spell" style="display: none;">
+                </div>                    
+                <div class="spelltop">
+                    <input class="input" id="spellname" placeholder="Nome do Feitiço">
                     <input class="input" id="spelltype" placeholder="Tipo do Feitiço">
                 </div>
                 <div class="spellmiddle">

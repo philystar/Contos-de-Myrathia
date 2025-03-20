@@ -162,6 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// toggler spell
 
 const toggleSpell = document.getElementById('toggleSpell');
 const spellDetails = document.getElementById('spellDetails');
@@ -255,3 +256,4 @@ document.querySelectorAll('.addSpellButton').forEach(button => {
       addSpell(spellgroup); // Adiciona um novo feitiço
   });
 });
+
