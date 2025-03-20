@@ -359,14 +359,14 @@
     margin-top: 2px;
 }
 
-.section2block {
+.spellGroup {
     background-color: var(--cor-fieldhighlight);
     border: 2px solid var(--cor-border);
     padding: 10px;
     border-radius: 10px;
 }
 
-.section2blockgroup {
+.spellInfo {
     display: flex;
     flex-direction: row;
     align-items: center;

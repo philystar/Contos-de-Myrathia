@@ -60,81 +60,39 @@
             </div>
             <div class="section2">
                 <div class="section2column1">
-                    <div class="spellgroup" id="cantrips">
-                        <div class="spellinput">
-                            <input class="input" placeholder="Nome do Feitiço">
-                            <button class="input" id="showSpell" type="submit">
+                    <label for="toggleSpell" class="toggleButton">Mostrar/Ocultar Feitiço</label>
+                    <div class="spell" id="spellDetails">                            
+                        <div class="spelltop">                               
+                            <input class="input" id="spellname" placeholder="Nome do Feitiço">
+                            <input class="input" id="spelltype" placeholder="Tipo do Feitiço">
                         </div>
-                        <div class="section2blockgroup">
-                            <input class="input" placeholder="Nome do Feitiço">
-                            <button class="input" id="showSpell" type="submit">
+                        <div class="spellmiddle">
+                            <div class="spellmiddle1">
+                                <label class="labels"> Tempo de Conjuração </label>                                
+                                <input class="input" id="spellaction" placeholder="Tempo de Conjuração">
+                                <label class="labels"> Alcance do Feitiço </label>
+                                <input class="input" id="spellrange" placeholder="Alcance do Feitiço">
+                            </div>
+                            <div class="spellmiddle2">
+                                <label class="labels"> Componentes do Feitiço </label>
+                                <input class="input" id="spellcomponents" placeholder="Componentes do Feitiço">                            
+                                <label class="labels"> Duração do Feitiço </label>
+                                <input class="input" id="spellduration" placeholder="Duração do Feitiço">
+                            </div>                                
                         </div>
-                        <div class="section2blockgroup">
-                            <input class="input" placeholder="Nome do Feitiço">
-                            <button class="input" id="showSpell" type="submit">
-                        </div>
+                        <div class="spellbottom">                                
+                            <div class="spelldescription">
+                                <label class="labels"> Descrição do Feitiço </label>
+                                <textarea id="spelldescription"></textarea>
+                            </div>
+                        </div>                                       
                     </div>
-                </div>
                 <div class="section2column2">
                 </div>
                 <div class="section2column3">
                     
                 </div>
-            </div>
-            <div class="spell">                            
-                <div class="spelltop">                               
-                    <input class="input" id="spellname" placeholder="Nome do Feitiço">
-                    <input class="input" id="spelltype" placeholder="Tipo do Feitiço">
-                </div>
-                <div class="spellmiddle">
-                    <div class="spellmiddle1">
-                        <label class="labels"> Tempo de Conjuração </label>                                
-                        <input class="input" id="spellaction" placeholder="Tempo de Conjuração">
-                        <label class="labels"> Alcance do Feitiço </label>
-                        <input class="input" id="spellrange" placeholder="Alcance do Feitiço">
-                    </div>
-                    <div class="spellmiddle2">
-                        <label class="labels"> Componentes do Feitiço </label>
-                        <input class="input" id="spellcomponents" placeholder="Componentes do Feitiço">                            
-                        <label class="labels"> Duração do Feitiço </label>
-                        <input class="input" id="spellduration" placeholder="Duração do Feitiço">
-                    </div>                                
-                </div>
-                <div class="spellbottom">                                
-                    <div class="spelldescription">
-                        <label class="labels"> Descrição do Feitiço </label>
-                        <textarea id="spelldescription"></textarea>
-                    </div>
-                </div>                                       
             </div>    
-        </div>
-        <div id="spellDetails" style="display: none;">
-            <div class="spell">                            
-                <div class="spelltop">                               
-                    <input class="input" id="spellname" placeholder="Nome do Feitiço">
-                    <input class="input" id="spelltype" placeholder="Tipo do Feitiço">
-                </div>
-                <div class="spellmiddle">
-                    <div class="spellmiddle1">
-                        <label class="labels"> Tempo de Conjuração </label>                                
-                        <input class="input" id="spellaction" placeholder="Tempo de Conjuração">
-                        <label class="labels"> Alcance do Feitiço </label>
-                        <input class="input" id="spellrange" placeholder="Alcance do Feitiço">
-                    </div>
-                    <div class="spellmiddle2">
-                        <label class="labels"> Componentes do Feitiço </label>
-                        <input class="input" id="spellcomponents" placeholder="Componentes do Feitiço">                            
-                        <label class="labels"> Duração do Feitiço </label>
-                        <input class="input" id="spellduration" placeholder="Duração do Feitiço">
-                    </div>                                
-                </div>
-                <div class="spellbottom">                                
-                    <div class="spelldescription">
-                        <label class="labels"> Descrição do Feitiço </label>
-                        <textarea id="spelldescription"></textarea>
-                    </div>
-                </div>                                       
-            </div>
         </div>
     </div>
     <script src="script.js"></script>

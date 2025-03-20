@@ -1,36 +1,36 @@
 // script.js
 function calculateModifier(attribute) {
-    // Obtém o valor do atributo
-    const attributeValue = parseInt(document.getElementById(attribute).value);
+  // Obtém o valor do atributo
+  const attributeValue = parseInt(document.getElementById(attribute).value);
 
-    // Calcula o modificador com base na tabela fornecida
-    let modifier;
-    if (attributeValue >= 1 && attributeValue <= 2) {
-        modifier = -2;
-    } else if (attributeValue >= 3 && attributeValue <= 4) {
-        modifier = -1;
-    } else if (attributeValue >= 5 && attributeValue <= 6) {
-        modifier = 0;
-    } else if (attributeValue >= 7 && attributeValue <= 8) {
-        modifier = +1;
-    } else if (attributeValue >= 9 && attributeValue <= 10) {
-        modifier = +2;
-    } else if (attributeValue >= 11 && attributeValue <= 12) {
-        modifier = +3;
-    } else if (attributeValue >= 13 && attributeValue <= 14) {
-        modifier = +4;
-    } else if (attributeValue >= 15 && attributeValue <= 16) {
-        modifier = +5;
-    } else if (attributeValue >= 17 && attributeValue <= 18) {
-        modifier = +6;
-    } else if (attributeValue >= 19 && attributeValue <= 20) {
-        modifier = +7;
-    } else {
-        modifier = 0; // Valor padrão se estiver fora do intervalo
-    }
+  // Calcula o modificador com base na tabela fornecida
+  let modifier;
+  if (attributeValue >= 1 && attributeValue <= 2) {
+    modifier = -2;
+  } else if (attributeValue >= 3 && attributeValue <= 4) {
+    modifier = -1;
+  } else if (attributeValue >= 5 && attributeValue <= 6) {
+    modifier = 0;
+  } else if (attributeValue >= 7 && attributeValue <= 8) {
+    modifier = +1;
+  } else if (attributeValue >= 9 && attributeValue <= 10) {
+    modifier = +2;
+  } else if (attributeValue >= 11 && attributeValue <= 12) {
+    modifier = +3;
+  } else if (attributeValue >= 13 && attributeValue <= 14) {
+    modifier = +4;
+  } else if (attributeValue >= 15 && attributeValue <= 16) {
+    modifier = +5;
+  } else if (attributeValue >= 17 && attributeValue <= 18) {
+    modifier = +6;
+  } else if (attributeValue >= 19 && attributeValue <= 20) {
+    modifier = +7;
+  } else {
+    modifier = 0; // Valor padrão se estiver fora do intervalo
+  }
 
-    // Atualiza o campo do modificador
-    document.getElementById(`${attribute}modifier`).value = modifier;
+  // Atualiza o campo do modificador
+  document.getElementById(`${attribute}modifier`).value = modifier;
 }
 
 const inputFile = document.querySelector(".pic_input");
@@ -38,20 +38,20 @@ const pictureImage = document.querySelector(".pic_img");
 const pictureImageTxt = "Escolha uma foto"
 pictureImage.innerHTML = pictureImageTxt;
 inputFile.addEventListener("change", function (e) {
-    const inputTarget = e.target
-    const file = inputTarget.files[0]
-    if (file) {
-        const reader = new FileReader()
-        reader.addEventListener("load", function (e) {
-            const readerTarget = e.target
-            const img = document.createElement("img")
-            img.src = readerTarget.result
-            img.classList.add("pic_img")
-            pictureImage.innerHTML = ""
-            pictureImage.appendChild(img)
-        })
-        reader.readAsDataURL(file)
-    } else (pictureImage.innerHTML = pictureImageTxt)
+  const inputTarget = e.target
+  const file = inputTarget.files[0]
+  if (file) {
+    const reader = new FileReader()
+    reader.addEventListener("load", function (e) {
+      const readerTarget = e.target
+      const img = document.createElement("img")
+      img.src = readerTarget.result
+      img.classList.add("pic_img")
+      pictureImage.innerHTML = ""
+      pictureImage.appendChild(img)
+    })
+    reader.readAsDataURL(file)
+  } else (pictureImage.innerHTML = pictureImageTxt)
 })
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -183,13 +183,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const spellgroup = document.querySelectorAll('.showSpell');
+// Seleciona o elemento clicável e a div togglável
+const toggleButton = document.querySelector('.toggleButton');
+const spellDetails = document.getElementById('spellDetails');
 
-const onCardClick = async (e) => {
-  const spellInput = e.currentTarget;
-  // clone the card
-  const spellInput = spellInput.cloneNode(true);
-  
+// Adiciona um evento de clique ao elemento clicável
+toggleButton.addEventListener('click', () => {
+  // Alterna a visibilidade da div
+  if (spellDetails.style.display === 'none' || spellDetails.style.display === '') {
+    spellDetails.style.display = 'block'; // Mostra a div
+  } else {
+    spellDetails.style.display = 'none'; // Oculta a div
+  }
 });
-
-spellgroup.forEach(spellinput => spellgroup.addEeventistener('click', onCardClick))
