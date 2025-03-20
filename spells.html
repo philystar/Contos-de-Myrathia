@@ -60,8 +60,16 @@
             </div>
             <div class="section2">
                 <div class="section2column1">
-                    <label for="toggleSpell" class="toggleButton">Mostrar/Ocultar Feitiço</label>
-                    <div class="spell" id="spellDetails">                            
+                    <div class="section2block">
+                        <input class="input" placeholder="Nome do Feitiço">
+                        <label for="toggleSpell" class="toggleButton">
+                            <input type="checkbox" id="toggleSpell">
+                        </label>
+                    </div>
+                    
+                    <!-- Janela flutuante com os detalhes do feitiço -->
+                    <div id="spellDetails" class="spell">
+                        <button id="closeButton" style="float: right;">X</button>                        
                         <div class="spelltop">                               
                             <input class="input" id="spellname" placeholder="Nome do Feitiço">
                             <input class="input" id="spelltype" placeholder="Tipo do Feitiço">
@@ -85,8 +93,9 @@
                                 <label class="labels"> Descrição do Feitiço </label>
                                 <textarea id="spelldescription"></textarea>
                             </div>
-                        </div>                                       
+                        </div>                        
                     </div>
+                </div>
                 <div class="section2column2">
                 </div>
                 <div class="section2column3">

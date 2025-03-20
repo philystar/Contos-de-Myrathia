@@ -162,16 +162,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Seleciona o elemento clicável e a div togglável
-const toggleButton = document.querySelector('.toggleButton');
+
+const toggleSpell = document.getElementById('toggleSpell');
 const spellDetails = document.getElementById('spellDetails');
 
-// Adiciona um evento de clique ao elemento clicável
-toggleButton.addEventListener('click', () => {
-  // Alterna a visibilidade da div
-  if (spellDetails.style.display === 'none' || spellDetails.style.display === '') {
-    spellDetails.style.display = 'block'; // Mostra a div
-  } else {
-    spellDetails.style.display = 'none'; // Oculta a div
-  }
+// Adiciona um evento de mudança ao checkbox
+toggleSpell.addEventListener('change', () => {
+    if (toggleSpell.checked) {
+        spellDetails.style.display = 'block'; // Mostra a janela flutuante
+    } else {
+        spellDetails.style.display = 'none'; // Oculta a janela flutuante
+    }
+});
+
+const closeButton = document.getElementById('closeButton');
+closeButton.addEventListener('click', () => {
+    spellDetails.style.display = 'none';
+    toggleSpell.checked = false; // Desmarca o checkbox
 });
