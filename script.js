@@ -182,3 +182,14 @@ document.addEventListener("DOMContentLoaded", function () {
     applyTheme(selectedTheme); // Aplica o novo tema
   });
 });
+
+const spellgroup = document.querySelectorAll('.showSpell');
+
+const onCardClick = async (e) => {
+  const spellInput = e.currentTarget;
+  // clone the card
+  const spellInput = spellInput.cloneNode(true);
+  
+});
+
+spellgroup.forEach(spellinput => spellgroup.addEeventistener('click', onCardClick))
