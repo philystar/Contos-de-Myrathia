@@ -384,6 +384,16 @@
     gap: 2px;
 }
 
+.closeButton {
+    width: 80px;
+}
+
+.closeButton:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
 #closeButton {
     width: 80px;
 }
@@ -448,10 +458,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-}
-
-.section2left {
-
 }
 
 .personality {

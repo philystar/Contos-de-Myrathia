@@ -82,11 +82,10 @@
 }
 
 .pic {
-    max-width: 270px;
-    max-height: 270px;
+    min-height: 100px;
+    min-width: 100px;
     display: flex;
     border-radius: 5px;
-    align-items: flex-start;
 }
 
 .pic_input {
